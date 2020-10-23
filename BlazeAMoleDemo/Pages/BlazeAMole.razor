@@ -1,0 +1,14 @@
+﻿@page "/"
+
+<h1>BlazeAMole</h1>
+<h2>Puntos: @score</h2>
+<h2>Segundos restantes: @currentTime</h2>
+<h2>@message</h2>
+
+
+<div class="board">
+    @foreach (var s in Squares)
+    {
+        <Square SquareModel="s" OnMouseUp="() => MouseUp(s)"/>
+    }
+</div>
